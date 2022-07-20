@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.24.0-rc3)
 
-project(cmakebasic)
+project(cmakebasic VERSION 1.0)
+
+configure_file(cmakebasicConfig.h.in cmakebasicConfig.h)
+
+#target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 
 add_executable(${PROJECT_NAME} 
   main.cpp
